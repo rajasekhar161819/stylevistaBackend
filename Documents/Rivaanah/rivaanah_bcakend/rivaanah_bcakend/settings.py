@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-j(q3!93%x#^*(o52=jjmia2!z=0soh=o^^$@@#fw1wwahd&$92
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rivaanah-backend.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['stylevistabackend.onrender.com', 'localhost']
 
 # Application definition
 
