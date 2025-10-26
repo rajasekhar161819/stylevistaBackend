@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 import socket
-import dj_database_url
+# import dj_database_url
 
 # Manually Ip4 for db connection
 # def get_ipv4(host):
@@ -115,12 +115,24 @@ WSGI_APPLICATION = 'rivaanah_bcakend.wsgi.application'
 #     }
 # }
 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',  # Default Supabase database name
+        'USER': 'postgres.eciugmwqmdnotnmtgotv',  # Default Supabase database user
+        'PASSWORD': 'StyleVista@18',  # Found in Supabase dashboard
+        'HOST': 'aws-1-ap-south-1.pooler.supabase.com',  # Found in Supabase dashboard
+        'PORT': '5432',  # Default PostgreSQL port
+    }
+}
+
 DATABASE_URL="postgresql://postgres.eciugmwqmdnotnmtgotv:StyleVista@18@db.eciugmwqmdnotnmtgotv.supabase.co:5432/postgres?sslmode=require"
 
 
-DATABASES = {
-    'default': dj_database_url.parse(os.getenv("DATABASE_URL"), conn_max_age=600)
-}
+# DATABASES = {
+#     'default': dj_database_url.parse(os.getenv("DATABASE_URL"), conn_max_age=600)
+# }
 
 
 # DATABASES = {
