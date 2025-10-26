@@ -16,10 +16,10 @@ import socket
 
 
 # Manually Ip4 for db connection
-def get_ipv4(host):
-    return socket.getaddrinfo(host, None, socket.AF_INET)[0][4][0]
+# def get_ipv4(host):
+#     return socket.getaddrinfo(host, None, socket.AF_INET)[0][4][0]
 
-DB_HOST = get_ipv4('db.eciugmwqmdnotnmtgotv.supabase.co')
+# DB_HOST = get_ipv4('db.eciugmwqmdnotnmtgotv.supabase.co')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
