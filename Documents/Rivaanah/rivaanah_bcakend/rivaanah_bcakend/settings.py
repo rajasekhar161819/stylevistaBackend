@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 import socket
-
+import dj_database_url
 
 # Manually Ip4 for db connection
 # def get_ipv4(host):
@@ -113,6 +113,13 @@ DATABASES = {
         'HOST': 'db-pooler.eciugmwqmdnotnmtgotv.supabase.co',  # Found in Supabase dashboard
         'PORT': '5432',  # Default PostgreSQL port
     }
+}
+
+DATABASE_URL="postgresql://postgres.eciugmwqmdnotnmtgotv:StyleVista@18@db.eciugmwqmdnotnmtgotv.supabase.co:5432/postgres?sslmode=require"
+
+
+DATABASES = {
+    'default': dj_database_url.parse(os.getenv("DATABASE_URL"), conn_max_age=600)
 }
 
 
