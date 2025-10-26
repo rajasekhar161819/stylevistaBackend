@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-j(q3!93%x#^*(o52=jjmia2!z=0soh=o^^$@@#fw1wwahd&$92
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['stylevistabackend.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['stylevistabackend.onrender.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -88,12 +88,25 @@ WSGI_APPLICATION = 'rivaanah_bcakend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',  # Default Supabase database name
+        'USER': 'postgres',  # Default Supabase database user
+        'PASSWORD': 'StyleVista@18',  # Found in Supabase dashboard
+        'HOST': 'db.eciugmwqmdnotnmtgotv.supabase.co',  # Found in Supabase dashboard
+        'PORT': '5432',  # Default PostgreSQL port
     }
 }
+
 
 # DATABASES = {
 #     'default': {
