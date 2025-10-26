@@ -104,16 +104,16 @@ WSGI_APPLICATION = 'rivaanah_bcakend.wsgi.application'
 # }
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',  # Default Supabase database name
-        'USER': 'postgres',  # Default Supabase database user
-        'PASSWORD': 'StyleVista@18',  # Found in Supabase dashboard
-        'HOST': 'db-pooler.eciugmwqmdnotnmtgotv.supabase.co',  # Found in Supabase dashboard
-        'PORT': '5432',  # Default PostgreSQL port
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',  # Default Supabase database name
+#         'USER': 'postgres',  # Default Supabase database user
+#         'PASSWORD': 'StyleVista@18',  # Found in Supabase dashboard
+#         'HOST': 'db-pooler.eciugmwqmdnotnmtgotv.supabase.co',  # Found in Supabase dashboard
+#         'PORT': '5432',  # Default PostgreSQL port
+#     }
+# }
 
 DATABASE_URL="postgresql://postgres.eciugmwqmdnotnmtgotv:StyleVista@18@db.eciugmwqmdnotnmtgotv.supabase.co:5432/postgres?sslmode=require"
 
